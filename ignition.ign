@@ -1,24 +1,42 @@
 {
   "ignition": {
-    "version": "3.4.0"
+    "config": {
+      "replace": {
+        "source": null,
+        "verification": {}
+      }
+    },
+    "security": {
+      "tls": {}
+    },
+    "timeouts": {},
+    "version": "3.0.0"
   },
   "passwd": {
     "users": [
       {
         "name": "core",
-        "passwordHash": "$6$saltsalt$tlAIXHVFkZ1FuqTT6H38e2mEKDCvTFqcmSFAgxT4QldLZfDrqE9bW.P3wY/AA/49XsRoPlrGVw.GsHWAsHTIS1" 
+        "passwordHash": "$6$rounds=4096$rb2d8D0wcn30AEL5$bTb2BeVQpoo37MIOuX7kAzR7XaVssOCbvjLeDzPrBg6dx9WpYqVI4FlOOBZwL08tDyTuhLJ8FYlp.yrye0PRb.",
+        "sshAuthorizedKeys": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDRKL5/Bp5tI4qTZhL0j3BNaSWQUdXB3BhyI0WgehdUtJ8nviPvq6xEqJl/r/fxZExTXxnIiwZcHJxFAHYyz9puFUPO2h28OdYRg2uOMBca4LFOS4vQz9GFVjO8gmvQotGUQaC45fH1CTw2+c+J4php7Dt4ru9Oem84xbnF3GS6LJ7ZBL7aQf4FsWt8Y2Xq0LRK22sqvtBFzvPkB9iX2fkfve9oBHwJ7o5Wn/Gd7ffDsTzRfzfB7LcT6HGynupwS7Uts78xGITDKWYAOHFZflCn5vVGqb0UmLz038YrXfC0RjOs8RVVOrI5UEmL5Jnlg/EpCZJQfZ0J63iCQ2t3Y7RRMBuid8T672lJjEMjqmjzlqI67zl1Ju32CSzhDTW8YNRUgcPd+JuGPyuHGIb/r6EshgbTIuuCDTorcS2sVrKoIAwdW1yAG46lUJSzfS5fFv88WLpVEhk0cANmEhrke1eEMFvCsjIGwoxqGNR1pgTGKNN2Vb8UXxXIwTF5Y5/dIW2TkJVrLW2UkfWK/tB06CVje3L9Dd6RMhYCkSX7ksgdbyGf7EAV8pYrIEeS1R3Up4rp1P3OlbkmJ4brFaBQ/PFwqekxPGdEfjGkHTMwWU2hOlZsPhk3+S5LZXpEVCIDRbmeqadxaj4p6Mu4uXn+ccgpaRa70TbZf41wBjkt+eXJAw== thefi@Emerald"
+        ]
       }
     ]
   },
   "storage": {
     "files": [
       {
-        "path": "/etc/ssh/sshd_config.d/enable-password-auth.conf",
-        "mode": 420,
+        "group": {},
+        "overwrite": true,
+        "path": "/etc/NetworkManager/system-connections/eth0.nmconnection",
+        "user": {},
         "contents": {
-          "source": "data:text/plain;charset=utf-8;base64,UGFzc3dvcmRBdXRoZW50aWNhdGlvbiB5ZXMK"
-        }
+          "source": "data:,%5Bconnection%5D%0Atype%3Dethernet%0Ainterface-name%3Deth0%0A%0A%5Bipv4%5D%0Amethod%3Ddhcp%0Aaddresses%3D192.168.1.10%2F24%0Agateway%3D192.168.1.1%0Adns%3D1.1.1.1%0A",
+          "verification": {}
+        },
+        "mode": 384
       }
     ]
-  }
+  },
+  "systemd": {}
 }
