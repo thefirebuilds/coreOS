@@ -9,5 +9,25 @@
         "passwordHash": "$6$saltsalt$tlAIXHVFkZ1FuqTT6H38e2mEKDCvTFqcmSFAgxT4QldLZfDrqE9bW.P3wY/AA/49XsRoPlrGVw.GsHWAsHTIS1" 
       }
     ]
+  },
+  "storage": {
+    "files": [
+      {
+        "path": "/etc/ssh/sshd_config.d/enable-password-auth.conf",
+        "mode": 420,
+        "contents": {
+          "source": "data:text/plain;charset=utf-8;base64,UGFzc3dvcmRBdXRoZW50aWNhdGlvbiB5ZXMK"
+        }
+      }
+    ]
+  },
+  "systemd": {
+    "units": [
+      {
+        "name": "sshd.service",
+        "enabled": true,
+        "contents": "[Service]\nExecStartPost=/bin/systemctl reload sshd\n"
+      }
+    ]
   }
 }
