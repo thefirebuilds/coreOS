@@ -6,28 +6,14 @@
     "users": [
       {
         "name": "core",
-        "passwordHash": "$6$saltsalt$tlAIXHVFkZ1FuqTT6H38e2mEKDCvTFqcmSFAgxT4QldLZfDrqE9bW.P3wY/AA/49XsRoPlrGVw.GsHWAsHTIS1"
+        "sshAuthorizedKeys": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCldVPzxds9jk4XLWQ2eMOKDsBhqDxCI6C9OwoEQNtrWCrf2YswpbRiSA/cDBKzzGjfIQZ9iLlPqf8JkJNuRI59AJzKL/lOE6Hcg5MnHQ0hfqh8agnuY3Jpdz+/kLFFey/yg+s1HRUpFEqy4LUBeU0jsIED+9LLmNo83j533e9ZdvzEhiy4Wz3czR/qRwBSi+lykqcEEFUh53Xw4jtHCb7arJAFrD0Q4OCqtvi6NPl4wXUjeHdxjFOhAF45AqUmudmBEufumgdkhpBTUs59vJpmoUlC59Xb5SAlCEnJIxb94KFghk/uOvqyE9EWvKYot4EHUjFpq5yYBRh7lypRn9I5 rsa-key-20241129"
+        ]
       }
     ]
   },
   "storage": {
-    "files": [
-      {
-        "path": "/home/core/.ssh/authorized_keys",
-        "mode": 384,
-        "contents": {
-          "inline": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCldVPzxds9jk4XLWQ2eMOKDsBhqDxCI6C9OwoEQNtrWCrf2YswpbRiSA/cDBKzzGjfIQZ9iLlPqf8JkJNuRI59AJzKL/lOE6Hcg5MnHQ0hfqh8agnuY3Jpdz+/kLFFey/yg+s1HRUpFEqy4LUBeU0jsIED+9LLmNo83j533e9ZdvzEhiy4Wz3czR/qRwBSi+lykqcEEFUh53Xw4jtHCb7arJAFrD0Q4OCqtvi6NPl4wXUjeHdxjFOhAF45AqUmudmBEufumgdkhpBTUs59vJpmoUlC59Xb5SAlCEnJIxb94KFghk/uOvqyE9EWvKYot4EHUjFpq5yYBRh7lypRn9I5 rsa-key-20241129"
-        }
-      }
-    ]
+    "files": []
   },
-  "systemd": {
-    "units": [
-      {
-        "name": "sshd.service",
-        "enabled": true,
-        "contents": "[Unit]\nDescription=OpenSSH server daemon\nAfter=network.target\n\n[Service]\nExecStart=/usr/sbin/sshd -D\n\n[Install]\nWantedBy=multi-user.target"
-      }
-    ]
-  }
+  "systemd": {}
 }
